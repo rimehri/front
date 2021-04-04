@@ -1,0 +1,77 @@
+<div class="home-btn d-none d-sm-block">
+    <a routerLink="">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house h2 text-white" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+      <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+    </svg></a>
+  </div>
+  <div>
+    <div class="container-fluid p-0">
+      <div class="row no-gutters">
+        <div class="col-lg-4">
+          <div class="authentication-page-content p-4 d-flex align-items-center min-vh-100">
+            <div class="w-100">
+              <div class="row justify-content-center">
+                <div class="col-lg-9">
+                  <div>
+                    <div class="text-center">
+                      <div>
+                        <a routerLink="" class="logo"><img src="assets/images/logo-dark.png" height="100"   alt="logo"></a>                      </div>
+  
+                      <h4 class="font-size-18 mt-4">Validate  your account</h4>
+                      <p class="text-muted">Validate  your account to MakeApp.</p>
+                    </div>
+  
+                    <div class="p-2 mt-5">
+                      <div class="alert alert-success mb-4" role="alert">
+                        Enter your code of verification
+                      </div>
+                      <form class="form-horizontal" [formGroup]="codeForm" (ngSubmit)="sendcode()">
+                       
+  
+                        <div class="form-group auth-form-group-custom mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor" class="bi bi-three-dots auti-custom-input-icon" viewBox="0 0 16 16">
+                                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                              </svg>
+                         
+                          
+                          <label for="code">Code</label>
+                          <input type="text" formControlName="code" class="form-control"
+                            id="code" placeholder="code verification">
+                          <div  class="invalid-feedback">
+                            <div *>Code is required</div>
+                            
+                          </div>
+                        </div>
+  
+                        <div class="mt-4 text-center">
+                          <button  class="mr-4 btn btn-primary w-md waves-effect waves-light" type="submit">Enter</button>
+                          <button  class="btn btn-primary w-md waves-effect waves-light" (click)="resend()">resend email</button>
+
+                        </div>
+                      </form>
+                    </div>
+  
+                    <div class="mt-5 text-center">
+                      <p>Don't have an account ? <a routerLink="/account/login" class="font-weight-medium text-primary">
+                          Log in
+                        </a> </p>
+                      <p>© 2020 MakeApp.</p>
+                    </div>
+                  </div>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-8">
+          <div class="authentication-bg">
+            <div class="bg-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end page -->
+  

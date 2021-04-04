@@ -1,0 +1,136 @@
+<div class="home-btn d-none d-sm-block">
+  <a routerLink=""> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+      class="bi bi-house h2 text-white" viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+      <path fill-rule="evenodd"
+        d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+    </svg></a>
+</div>
+<div>
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-lg-4">
+        <div class="authentication-page-content p-4 d-flex align-items-center min-vh-100">
+          <div class="w-100">
+            <div class="row justify-content-center">
+              <div class="col-lg-9">
+                <div>
+                  <div class="text-center">
+
+                    <div>
+
+                      <a routerLink="" class="logo"><img src="assets/images/logo1.png" height="100" alt="logo"></a>
+                    </div>
+
+                    <h4 class="font-size-18 mt-4">Register account</h4>
+                    <p class="text-muted">Get your free EasyConnect account now.</p>
+                  </div>
+
+                  <div class="p-2 mt-5">
+                    <form class="form-horizontal" [formGroup]="registerForm" (ngSubmit)="register()">
+
+
+                      <div class="form-group auth-form-group-custom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor"
+                          class="bi bi-person auti-custom-input-icon" viewBox="0 0 16 16">
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+
+                        <label for="username">Username</label>
+                        <input type="text" formControlName="username" class="form-control" id="username"
+                          placeholder="Enter username">
+
+                     
+                      </div>
+                      <div *ngIf="username?.touched && username?.invalid">
+                        <small *ngIf="username?.errors?.required" class="text-danger">Firstname is required<br></small>
+                        <small *ngIf="username?.errors?.pattern" class="text-danger">Invalid Firstname<br></small>
+                        <small *ngIf="username?.errors?.minlength" class="text-danger">Firstname must contain two characters at least</small>
+                      </div>
+
+
+
+                      <div class="form-group auth-form-group-custom mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor"
+                          class="bi bi-person auti-custom-input-icon" viewBox="0 0 16 16">
+                          <path
+                            d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+
+                        <label for="lastname">Lastname</label>
+                        <input type="text" formControlName="lastname" class="form-control" id="lastname"
+                          placeholder="Enter Lastname">
+                        </div>
+                        <div *ngIf="lastname?.touched && lastname?.invalid">
+                          <small *ngIf="lastname?.errors?.required" class="text-danger">Lastname is required<br></small>
+                          <small *ngIf="lastname?.errors?.pattern" class="text-danger">Invalid Lastname<br></small>
+                          <small *ngIf="lastname?.errors?.minlength" class="text-danger">Lastname must contain two characters at least</small>
+                        </div>
+                      
+                      <div class="form-group auth-form-group-custom ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="20" fill="currentColor"
+                          class="bi bi-envelope-fill auti-custom-input-icon " viewBox="0 0 16 16">
+                          <path
+                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
+                        </svg>
+                        <label for="email">Email</label>
+                        <input type="email" formControlName="email" class="form-control" id="email" placeholder="Email">
+                        
+                      </div>
+                      
+                      <div  *ngIf="email?.touched && email?.invalid">
+                        <div *ngIf="email?.errors?.required" class="text-danger">Email is required</div>
+                        <div *ngIf="email?.errors?.email" class="text-danger">Email must be a valid email address</div>
+                      
+                      </div>
+                      <div *ngIf="isemail"class="text-danger">Email should be unique</div>
+                      <div class="form-group auth-form-group-custom">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" fill="currentColor"
+                          class="bi bi-lock auti-custom-input-icon" viewBox="0 0 16 16">
+                          <path
+                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z" />
+                        </svg>
+                        <label for="password">Password</label>
+                        <input type="password" formControlName="password" class="form-control" id="password"
+                          placeholder="Password">
+                        
+                      </div>
+                      <div   *ngIf="password?.touched && password?.invalid" >
+                        <div *ngIf="password?.errors?.required" class="text-danger"  >Password is required</div>
+                      </div>
+
+                      <div  class="text-center">
+                        <button class="btn btn-primary w-md waves-effect waves-light" type="submit">
+                          Register </button>
+                      </div>
+
+                      <div class="mt-4 text-center">
+                        <p class="mb-0">By registering you agree to the EasyConnect <a href="#"
+                            class="text-primary">Terms of
+                            Use</a></p>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="mt-5 text-center">
+                    <p>Already have an account ? <a routerLink="/account/login" class="font-weight-medium text-primary">
+                        Login</a> </p>
+                    <p>© 2021 EasyConnect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="authentication-bg">
+          <div class="bg-overlay"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end page -->

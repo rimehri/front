@@ -1,0 +1,237 @@
+html,
+body,
+#wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+html {
+  height: 0;
+}
+
+@media (max-width: 479px) {
+    .sep-sec {
+        padding-bottom: 0px !important;
+        padding-top: 0px !important;
+    }
+    #features article {
+        margin-bottom: 40px !important;
+    }
+    .title-container {
+        font-size: 40px !important;
+    }
+    .title-header {
+        padding-top: 190px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    #features .container header h2 {
+        margin-left: 0px !important;
+        margin-bottom: 30px !important;
+    }  
+}
+
+@media (min-width: 480px) {
+    .container {
+        max-width: unset !important;
+        width: 95% !important;
+    }
+    .sep-sec {
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+    .title-container {
+        font-size: 50px !important;
+    }
+    #features article {
+        margin-bottom: 40px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px !important;
+        width: 750px !important;
+    }
+    .sep-sec {
+      padding-bottom: 45px !important;
+      padding-top: 20px !important;
+    }
+    .title-container {
+        font-size: 74px !important;
+    }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px !important;
+    width: 970px !important;
+  }
+  .sep-sec {
+      padding-bottom: 45px !important;
+      padding-top: 30px !important;
+  }
+  .title-container {
+     font-size: 100px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px !important;
+        width: 1170px !important;
+    }
+    .title-container {
+        font-size: 120px !important;
+    }
+    .sep-sec {
+        padding-bottom: 45px !important;
+        padding-top: 60px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1380px !important;
+    width: 1380px !important;
+  }
+}
+
+#features section .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.background_header {
+    background: linear-gradient(45deg,#002d58,#0093a2);
+    width: 100vw;
+    padding-top: 0px;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 40px;
+}
+
+.title-header {
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 60px;
+    font-family: Nunito, Arial, sans-serif;
+    font-size: 100px;
+    color: white;
+}
+
+.title-container {
+    font-size: 120px;
+    font-weight: 300;
+}
+
+.btn-create-header {
+    color: white;
+    background-color: #009ED9;
+    border-radius: 30px;
+    padding: 13px 26px 13px;
+    letter-spacing: 1px;
+    border: none;
+    font-size: 14px;
+    font-family: Lato,Arial,sans-serif;
+    text-transform: uppercase;
+}
+
+.btn-create-header:hover {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: #1b5e85;
+}
+
+#features .title h2 {
+    color: #666;
+    font-size: 26px;
+    font-weight: 300;
+    font-family: Lato,Arial,sans-serif;
+    margin-top: 0;
+}
+
+#features .container header {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#features section header {
+    font-weight: 700;
+    font-family: Lato,Arial,sans-serif;
+}
+
+#features section {
+    position: relative;
+    margin-top: 60px;
+    color: #999;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: Lato,Arial,sans-serif;
+    border-bottom: 1px solid #ddd;
+}
+
+#features .label {
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 10px;
+    padding: 4px 10px;
+    font-weight: 400;
+    position: relative;
+    margin-right: 5px;
+}
+
+#features .label.label-CLASSIC {
+    background: #1e9fd6;
+}
+
+#features .label.label-SHOP {
+    background: #e35e7e;
+}
+
+#features .label.label-GRAY, #features .label.label-GREY, #features .label.label-GRIS {
+    background: #333;
+}
+
+#features .label.label-ORANGE {
+    background: #f88b4f;
+}
+
+.sep-sec {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#features .container header h2 {
+    margin-left: 15px;
+    margin-bottom: 30px;
+}
+
+#features h3 {
+    font-family: Lato, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.create_app {
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  background-color: #009ed9;
+  color: white;
+  border: none;
+  padding: 13px 26px 11px;
+  letter-spacing: 1px;
+}
+
+.create_app:hover {
+  text-decoration: none;
+  color: white;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+  box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
